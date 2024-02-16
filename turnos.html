@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/icons/icono.ico">
+
+    <!-- Meta Datos -->
+    <title>Veterinaria en Rosario | Contacto |Dr. Julian Pedemonte</title>
+    <meta name="description" content="Veterinaria en Rosario, urgencias veterinarias 24hs a domicilio a cargo del Dr. Julian Pedemonte">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- fonts -->
+    <link 
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.min.css" 
+    >
+    <!-- icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header 
+    class="pt-8 lg:pt-6">
+        <div
+            class="container mx-auto lg:relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0"
+        >
+            <!-- Logo -->
+            <div class="flex justify-center lg:justify-normal">
+                <a href="/">
+                    <!-- <img src="./assets/img/header/logo.svg" alt=""> -->
+                    <img class="h-28" src="./assets/img/header/Logo color.png" alt="">
+                </a>
+            </div>
+
+            <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0">
+                <!-- Ubicacion -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
+                    <i class="ri-map-pin-2-fill text-2xl text-accent"> </i>
+                    <a href="https://www.google.com/maps?um=1&fb=1&gl=ar&sa=X&geocode=KQki7LJyq7eVMVshYZSjgMJt&daddr=Pasco+1851,+S2000+Rosario,+Santa+Fe&ved=2ahUKEwjE57KKiqaEAxWcuJUCHRbyD5oQiBN6BQgAEIMB"
+                    class="text-secondary hover:text-accent-secondary transition-all duration-300">
+                        Pasco 1851, Rosario, Santa Fe
+                    </a>
+                </div>
+                <!-- Telefono -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
+                    <i class="ri-phone-fill text-2xl text-accent"></i>
+                    <a class="text-secondary hover:text-accent-secondary transition-all duration-300" href="tel:4851242">4851242</a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Appoinment -->
+    <section 
+        class="appoinment section hidden"
+        id="appoinment">
+        <div class="container mx-auto">
+            <h2 class="appoinment__title h2 mb-[50px] text-center xl:text-left">
+                Agendá tu Consulta Veterinaria
+            </h2>
+            <!-- Principio del widget integrado de Calendly -->
+            <div class="shadow-custom2 h-[1300px] lg:h-[800px] calendly-inline-widget" data-url="https://calendly.com/civetrosario/consulta" ></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Final del widget integrado de Calendly -->
+        </div>
+    </section>
+
+
+    <!-- Principio del widget integrado de Calendly -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/civetrosario/consulta?hide_gdpr_banner=1" style="min-width:320px;height:1000px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Final del widget integrado de Calendly -->
+
+    <!-- Footer -->
+    <footer 
+        class="footer pt-12 xl:pt-[150px]">
+        <div class="container mx-auto pb-12 xl:pb-[100px]">
+            <div class="flex flex-col xl:flex-row gap-x-5 gap-y-10">
+                <!-- Footer contact section -->
+                <div class="footer__item flex-1">
+                    <!-- Logo -->
+                    <a href="">
+                        <img class="w-32" src="assets/img/header/Logo color.png " alt="">
+                    </a>
+                    <!-- Description -->
+                    <p class="mb[20px]">
+                        Centro Integral Veterinario Lider en Rosario 
+                    </p>
+                    <!-- Location, email & phone-->
+                    <div class="flex flex-col gap-y-3 mb-10">
+                        <a
+                            href="https://www.google.com/maps?um=1&fb=1&gl=ar&sa=X&geocode=KQki7LJyq7eVMVshYZSjgMJt&daddr=Pasco+1851,+S2000+Rosario,+Santa+Fe&ved=2ahUKEwjE57KKiqaEAxWcuJUCHRbyD5oQiBN6BQgAEIMB" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-map-pin-fill text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">Pasco 1851, Rosario, Santa Fe</div>
+                        </a>
+                        <a
+                            href="mailto:civetpedemonte@gmail.com" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-mail-fill text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">civetpedemonte@gmail.com</div>
+                        </a>
+                        <a
+                            href="tel:4851242" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-phone-fill text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">4851242 </div>
+                        </a>
+                        <a
+                            href="tel:03416402289" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-24-hours-line text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">(0341) 640-2289</div>
+                        </a>
+                        
+                    </div>
+                    <!-- Socials -->
+                    <div class="flex gap-[14px] text-[30px]">
+                        <!-- Social 1 -->
+                        <a 
+                            target="_BLANK"
+                            href="https://www.facebook.com/civetrosario"
+                            class="p-[10px] rounded-[10px] shadow-custom2 
+                            text-accent-secondary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-facebook-circle-line"></i>
+                        </a>
+                        <!-- Social 2 -->
+                        <a 
+                            target="_BLANK"
+                            href="https://www.instagram.com/civetrosario/"
+                            class="p-[10px] rounded-[10px] shadow-custom2 
+                            text-accent-secondary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <!-- Social 3 -->
+                        <a 
+                            target="_BLANK"
+                            href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..."
+                            class="p-[10px] rounded-[10px] shadow-custom2 
+                            text-accent-secondary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <!-- Footer quick links section -->
+                <div class="footer__item flex-1">
+                    <h4 class="h4 mb-5">Acceso rapido</h4>
+                    <div>
+                        <ul class="flex-1 flex flex-col gap-y-5">
+                            <li><a href="#" class="hover:text-accent transition-all">Inicio</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Veterinarios</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Servicios</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Blog</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer opening hours section -->
+                <div class="footer__item flex-1">
+                    <h4 class="h4 mb-5">Horarios de Atención</h4>
+                    <!-- List -->
+                    <div class="flex flex-col gap-5">
+                        <!-- Item -->
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Lunes - Viernes</div>
+                                <div class="text-accent font-medium">9am - 12.30pm  |  16.30 - 20pm</div>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Sabado</div>
+                                <div class="text-accent font-medium">9am - 13pm  |  17 - 19pm</div>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Domingo</div>
+                                <div class="text-accent font-medium">Cerrado</div>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Urgencias 24hs</div>
+                                <div class="text-accent font-medium">(0341) 640-2289</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="py-[30px] border-t">
+            <div class="container mx-auto text-center">
+                <div class="font-ligth text-base">
+                    &copy; 2024 CIVet - Todos los derechos reservados
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    
+    <!-- WhatsApp Float -->
+    <div 
+        class="bg-transparent w-[80px] h-[80px] fixed rounded-full sm:right-10 sm:bottom-10 right-5 bottom-5">
+        <a target="_BLANK" href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar...">
+            <img src="assets/icons/whatsapp/whatsapp.svg" alt="">
+        </a>
+    </div>
+    
+    <!-- Scripts -->
+    <!-- swiper js -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- scroll reveal -->
+    <script src="js/scrollreveal.min.js"></script>
+    <!-- main -->
+    <script src="js/main.js"></script>
+</body>
+</html>

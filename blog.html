@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/icons/icono.ico">
+
+    <!-- Meta Datos -->
+    <title>Veterinaria en Rosario | Contacto |Dr. Julian Pedemonte</title>
+    <meta name="description" content="Veterinaria en Rosario, urgencias veterinarias 24hs a domicilio a cargo del Dr. Julian Pedemonte">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- fonts -->
+    <link 
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.min.css" 
+    >
+    <!-- icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header 
+    class="py-8 lg:pt-6 lg:pb-14">
+        <div
+            class="container mx-auto lg:relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0"
+        >
+            <!-- Logo -->
+            <div class="flex justify-center lg:justify-normal">
+                <a href="/">
+                    <!-- <img src="./assets/img/header/logo.svg" alt=""> -->
+                    <img class="h-28" src="./assets/img/header/Logo color.png" alt="">
+                </a>
+            </div>
+
+            <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0">
+                <!-- Ubicacion -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
+                    <i class="ri-map-pin-2-fill text-2xl text-accent"> </i>
+                    <a href="https://www.google.com/maps?um=1&fb=1&gl=ar&sa=X&geocode=KQki7LJyq7eVMVshYZSjgMJt&daddr=Pasco+1851,+S2000+Rosario,+Santa+Fe&ved=2ahUKEwjE57KKiqaEAxWcuJUCHRbyD5oQiBN6BQgAEIMB"
+                    class="text-secondary hover:text-accent-secondary transition-all duration-300">
+                        Pasco 1851, Rosario, Santa Fe
+                    </a>
+                </div>
+                <!-- Telefono -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
+                    <i class="ri-phone-fill text-2xl text-accent"></i>
+                    <a class="text-secondary hover:text-accent-secondary transition-all duration-300" href="tel:4851242">4851242</a>
+                </div>
+                <!-- btn -->
+                <div class="hidden lg:flex items-center">
+                    <button id="appoinmentBtn" class="btn btn-sm btn-outline w-[260px] lg:w-auto mx-auto lg:mx-0">
+                        Agenda tu turno  
+                    </button>
+                </div>
+
+                <!-- mobile nav -->
+                <nav class="mnav bg-white fixed w-[300px] top-0 h-screen 
+                -left-[300px] shadow-2xl lg:hidden transition-all duration-300 z-20">
+                    
+                    <!-- nav trigger btn -->
+                    <div class="mnav__close-btn bg-primary w-8 h-8 relative -right-full
+                    top-8 flex justify-center items-center rounded-tr-lg rounded-br-lg
+                    cursor-pointer transition-all">
+                        <i class="mnav__close-btn-icon ri-arrow-right-s-line text-2xl text-white"></i>
+                    </div>
+
+                    <!-- nav content -->
+                    <div class="px-12 flex flex-col gap-y-12 h-full">
+                        <!-- Logo -->
+                        <a href="#">
+                            <!-- <img src="assets/img/header/logo.svg" alt=""> -->
+                            <img class="h-28" src="./assets/img/header/Logo color.png" alt="">
+                        </a>
+                        <!-- List -->
+                        <ul class="flex flex-col gap-y-5">
+                            <li>
+                                <a 
+                                    href="#"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Inicio</a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="#"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Veterinarios</a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="#"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Servicios</a>
+                            </li>
+                            <!-- Oculta -->
+                            <li class="hidden">
+                                <a 
+                                    href="#"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Blog</a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="#"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Contacto</a>
+                            </li>
+                            <li>
+                                <a 
+                                    target="_BLANK"    
+                                    href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..."
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >WhastApp</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+
+                <!-- desktop nav -->
+                <nav 
+                class="bg-white absolute w-full left-0 -bottom-[86px] 
+                shadow-custom1 h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-between lg:px-[50px]">
+                    <!-- List -->
+                    <ul class="flex gap-x-4">
+                        <li>
+                            <a 
+                                href="/"
+                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                            >Inicio</a>
+                        </li>
+                        <li class="hidden">
+                            <a 
+                                href="#"
+                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                            >Veterinarios</a>
+                        </li>
+                        <li>
+                            <a 
+                                id="servicesNavBtn"
+                                href="/"
+                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                            >Servicios</a>
+                        </li>
+                        <!-- Oculta -->
+                        <li class="hidden">
+                            <a 
+                                href="#"
+                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                            >Blog</a>
+                        </li>
+                        <li>
+                            <a 
+                                href="#"
+                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                            >Contacto</a>
+                        </li>
+                        <li>
+                            <a 
+                                target="_BLANK"    
+                                href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..."
+                                class="text-secondary hover:text-accent transition-all duration-300"
+                            >WhastApp</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section 
+        class="services section"
+        id="servicesSection">
+        <!-- bg -->
+        <div
+            class="bg-accent bg-cover bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[20px] xl:pt-[70px] px-6
+            xl:px-0 relative h-[368px] flex items-center xl:items-start -z-10"
+            >
+            <!-- Pattern -->
+            <div class="absolute left-0 bottom-0">
+                <img src="/assets/img/newsletter/pattern.svg" alt="">
+            </div> 
+            <div class="container mx-auto">
+                <!-- text -->
+                <div
+                    class="services__top flex items-center flex-col xl:flex-row xl:mb-[60px]">
+                    <h2 class="h2 text-white flex-1 mb-4 xl:mb-0 text-center xl:text-left">Contacto</h2>
+                </div>
+            </div>
+        </div>
+        <!-- grid container -->
+        <div class="container mx-auto mt-8 xl:-mt-[144px]">
+            <!-- grid -->
+            <div class="grid xl:grid-cols-4 gap-5 px-8 xl:px-0">
+                <!-- grid item -->
+                <a
+                    href="tel:03416402289"
+                    class="services__item bg-white p-[30px] rounded-[10px] 
+                    shadow-custom2 min-h-[288px] flex flex-col items-center text-center">
+                    <!-- Grid item icon -->
+                    <div class="mb-[15px]">
+                        <i class="ri-24-hours-line text-5xl text-accent-secondary"></i>
+                    </div>
+                    <!-- grid item title -->
+                    <h3 class="h3 mb-[10px]">
+                        Urgencias Veterinarias 24hs a Domicilio
+                    </h3>
+                    <!-- grid item -->
+                    <p class="font-light leading-normal max-w-[300px]">
+                        <b class="text-accent">(0341) 640-2289</b>
+                        <br>
+                        Línea para <span class="text-accent-tertiary">URGENCIAS 24hs</span> a domicilio
+                    </p>
+                </a>
+                <!-- grid item -->
+                <a
+                    target="_BLANK" 
+                    href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..."
+                    class="services__item bg-white p-[30px] rounded-[10px] 
+                    shadow-custom2 min-h-[288px] flex flex-col items-center text-center">
+                    <!-- Grid item icon -->
+                    <div class="mb-[15px]">
+                        <i class="ri-whatsapp-line text-5xl text-accent-secondary"></i>
+                    </div>
+                    <!-- grid item title -->
+                    <h3 class="h3 mb-[10px]">
+                        WhastApp
+                    </h3>
+                    <!-- grid item -->
+                    <p class="font-light leading-normal max-w-[300px]">
+                        <b class="text-accent">0341-640-2289</b>
+                        <br> 
+                        <i>Respondemos 24hs</i>
+                    </p>
+                </a>
+                <!-- grid item -->
+                <a
+                    href="tel:4851242"
+                    class="services__item bg-white p-[30px] rounded-[10px] 
+                    shadow-custom2 min-h-[288px] flex flex-col items-center text-center">
+                    <!-- Grid item icon -->
+                    <div class="mb-[15px]">
+                        <img src="assets/icons/services/stethoscope.svg" alt="">
+                    </div>
+                    <!-- grid item title -->
+                    <h3 class="h3 mb-[10px]">
+                        Consultorio
+                    </h3>
+                    <!-- grid item -->
+                    <p class="font-light leading-normal max-w-[300px]">
+                        <b class="text-accent">4851242</b>
+                        <br>
+                        Línea para <span class="text-accent-tertiary">Consultas</span>
+                        <br> 
+                        <i>Atención en horario laboral</i>
+                    </p>
+                </a>
+                
+                <!-- grid item -->
+                <a
+                    href="tel:4851242"
+                    class="services__item bg-white p-[30px] rounded-[10px] 
+                    shadow-custom2 min-h-[288px] flex flex-col items-center text-center">
+                    <!-- Grid item icon -->
+                    <div class="mb-[15px]">
+                        <img src="assets/icons/services/bath.svg" alt="">
+                    </div>
+                    <!-- grid item title -->
+                    <h3 class="h3 mb-[10px]">
+                        Peluquería Canina
+                    </h3>
+                    <!-- grid item description-->
+                    <p class="font-light leading-normal max-w-[300px]">
+                        <b class="text-accent">4851242</b>
+                        <br>
+                        <i>Solicitar turno llamando por la mañana</i>
+                    </p>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End services -->
+
+    <!-- Appoinment -->
+    <section 
+        class="appoinment section"
+        id="appoinment">
+        <div class="container mx-auto">
+            <h2 class="appoinment__title h2 mb-[50px] text-center xl:text-left">
+                Agendá tu Consulta Veterinaria
+            </h2>
+            <div class="appoinment__container">
+                <!-- Principio del widget integrado de Calendly -->
+                <div class="shadow-custom2 h-[1100px] lg:h-[700px] calendly-inline-widget" data-url="https://calendly.com/civetrosario/consulta" ></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Final del widget integrado de Calendly -->
+            </div>
+        </div>
+
+    </section>
+    <!-- End Appoinment -->
+
+
+    <!-- Footer -->
+    <footer 
+        class="footer pt-12 xl:pt-[150px]">
+        <div class="container mx-auto pb-12 xl:pb-[100px]">
+            <div class="flex flex-col xl:flex-row gap-x-5 gap-y-10">
+                <!-- Footer contact section -->
+                <div class="footer__item flex-1">
+                    <!-- Logo -->
+                    <a href="">
+                        <img class="w-32" src="assets/img/header/Logo color.png " alt="">
+                    </a>
+                    <!-- Description -->
+                    <p class="mb[20px]">
+                        Centro Integral Veterinario Lider en Rosario 
+                    </p>
+                    <!-- Location, email & phone-->
+                    <div class="flex flex-col gap-y-3 mb-10">
+                        <a
+                            href="https://www.google.com/maps?um=1&fb=1&gl=ar&sa=X&geocode=KQki7LJyq7eVMVshYZSjgMJt&daddr=Pasco+1851,+S2000+Rosario,+Santa+Fe&ved=2ahUKEwjE57KKiqaEAxWcuJUCHRbyD5oQiBN6BQgAEIMB" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-map-pin-fill text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">Pasco 1851, Rosario, Santa Fe</div>
+                        </a>
+                        <a
+                            href="mailto:civetpedemonte@gmail.com" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-mail-fill text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">civetpedemonte@gmail.com</div>
+                        </a>
+                        <a
+                            href="tel:4851242" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-phone-fill text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">4851242 </div>
+                        </a>
+                        <a
+                            href="tel:03416402289" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-24-hours-line text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">(0341) 640-2289</div>
+                        </a>
+                        
+                    </div>
+                    <!-- Socials -->
+                    <div class="flex gap-[14px] text-[30px]">
+                        <!-- Social 1 -->
+                        <a 
+                            target="_BLANK"
+                            href="https://www.facebook.com/civetrosario"
+                            class="p-[10px] rounded-[10px] shadow-custom2 
+                            text-accent-secondary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-facebook-circle-line"></i>
+                        </a>
+                        <!-- Social 2 -->
+                        <a 
+                            target="_BLANK"
+                            href="https://www.instagram.com/civetrosario/"
+                            class="p-[10px] rounded-[10px] shadow-custom2 
+                            text-accent-secondary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <!-- Social 3 -->
+                        <a 
+                            target="_BLANK"
+                            href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..."
+                            class="p-[10px] rounded-[10px] shadow-custom2 
+                            text-accent-secondary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <!-- Footer quick links section -->
+                <div class="footer__item flex-1">
+                    <h4 class="h4 mb-5">Acceso rapido</h4>
+                    <div>
+                        <ul class="flex-1 flex flex-col gap-y-5">
+                            <li><a href="#" class="hover:text-accent transition-all">Inicio</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Veterinarios</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Servicios</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Blog</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer opening hours section -->
+                <div class="footer__item flex-1">
+                    <h4 class="h4 mb-5">Horarios de Atención</h4>
+                    <!-- List -->
+                    <div class="flex flex-col gap-5">
+                        <!-- Item -->
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Lunes - Viernes</div>
+                                <div class="text-accent font-medium">9am - 12.30pm  |  16.30 - 20pm</div>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Sabado</div>
+                                <div class="text-accent font-medium">9am - 13pm  |  17 - 19pm</div>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Domingo</div>
+                                <div class="text-accent font-medium">Cerrado</div>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Urgencias 24hs</div>
+                                <div class="text-accent font-medium">(0341) 640-2289</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="py-[30px] border-t">
+            <div class="container mx-auto text-center">
+                <div class="font-ligth text-base">
+                    &copy; 2024 CIVet - Todos los derechos reservados
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    
+    <!-- WhatsApp Float -->
+    <div 
+        class="bg-transparent w-[80px] h-[80px] fixed rounded-full right-10 bottom-10">
+        <a target="_BLANK" href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar...">
+            <img src="assets/icons/whatsapp/whatsapp.svg" alt="">
+        </a>
+    </div>
+    
+    <!-- Scripts -->
+    <!-- swiper js -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- scroll reveal -->
+    <script src="js/scrollreveal.min.js"></script>
+    <!-- main -->
+    <script src="js/main.js"></script>
+</body>
+</html>

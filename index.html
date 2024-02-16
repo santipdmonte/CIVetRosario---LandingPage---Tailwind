@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/icons/icono.ico">
+
+    <!-- Meta Datos -->
+    <title>Veterinaria en Rosario | Dr. Julian Pedemonte | CIVet Rosario</title>
+    <meta name="description" content="
+    Veterina en Rosario. Veterinario 24hs a domicilio, Peluquería Canina, PetShop, Chips para Viajar con Perros & mas servicios.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- icons -->
+    <link 
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.min.css" 
+    >
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header 
+    class="py-8 lg:pt-6 lg:pb-14">
+        <div
+            class="container mx-auto lg:relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0"
+        >
+            <!-- Logo -->
+            <div class="flex justify-center lg:justify-normal">
+                <a href="#">
+                    <!-- <img src="./assets/img/header/logo.svg" alt=""> -->
+                    <img class="h-28" src="./assets/img/header/Logo color.png" alt="">
+                </a>
+            </div>
+
+            <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0">
+                <!-- Ubicacion -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
+                    <i class="ri-map-pin-2-fill text-2xl text-accent"> </i>
+                    <a href="https://www.google.com/maps?um=1&fb=1&gl=ar&sa=X&geocode=KQki7LJyq7eVMVshYZSjgMJt&daddr=Pasco+1851,+S2000+Rosario,+Santa+Fe&ved=2ahUKEwjE57KKiqaEAxWcuJUCHRbyD5oQiBN6BQgAEIMB"
+                    class="text-secondary hover:text-accent-secondary transition-all duration-300">
+                        Pasco 1851, Rosario, Santa Fe
+                    </a>
+                </div>
+                <!-- Telefono -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
+                    <i class="ri-phone-fill text-2xl text-accent"></i>
+                    <a class="text-secondary hover:text-accent-secondary transition-all duration-300" href="tel:4851242">4851242</a>
+                </div>
+                <!-- btn -->
+                <div class="hidden lg:flex items-center">
+                    <button id="appoinmentBtn" class="btn btn-sm btn-outline w-[260px] lg:w-auto mx-auto lg:mx-0">
+                        Agenda tu turno  
+                    </button>
+                </div>
+
+                <!-- mobile nav -->
+                <nav class="mnav bg-white fixed w-[300px] top-0 h-screen 
+                -left-[300px] shadow-2xl lg:hidden transition-all duration-300 z-20">
+                    
+                    <!-- nav trigger btn -->
+                    <div class="mnav__close-btn bg-primary w-8 h-8 relative -right-full
+                    top-8 flex justify-center items-center rounded-tr-lg rounded-br-lg
+                    cursor-pointer transition-all">
+                        <i class="mnav__close-btn-icon ri-arrow-right-s-line text-2xl text-white"></i>
+                    </div>
+
+                    <!-- nav content -->
+                    <div class="px-12 flex flex-col gap-y-12 h-full">
+                        <!-- Logo -->
+                        <a href="/">
+                            <!-- <img src="assets/img/header/logo.svg" alt=""> -->
+                            <img class="h-28" src="./assets/img/header/Logo color.png" alt="">
+                        </a>
+                        <!-- List -->
+                        <ul class="flex flex-col gap-y-5">
+                            <li>
+                                <a 
+                                    href="/"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Inicio</a>
+                            </li>
+                            <li class="hidden">
+                                <a 
+                                    href="#"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Veterinarios</a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="#"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Servicios</a>
+                            </li>
+                            <!-- Oculta -->
+                            <li class="hidden">
+                                <a 
+                                    href="#"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Blog</a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="/contacto"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Contacto</a>
+                            </li>
+                            <li>
+                                <a 
+                                    target="_BLANK"    
+                                    href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..."
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >WhastApp</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+
+                <!-- desktop nav -->
+                <nav 
+                class="bg-white absolute w-full left-0 -bottom-[86px] 
+                shadow-custom1 h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-between lg:px-[50px]">
+                    <!-- List -->
+                    <ul class="flex gap-x-4">
+                        <li>
+                            <a 
+                                href="#"
+                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                            >Inicio</a>
+                        </li>
+                        <li class="hidden">
+                            <a 
+                                href="#"
+                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                            >Veterinarios</a>
+                        </li>
+                        <li>
+                            <a 
+                                id="servicesNavBtn"
+                                href="#"
+                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                            >Servicios</a>
+                        </li>
+                        <!-- Oculta -->
+                        <li class="hidden">
+                            <a 
+                                href="#"
+                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                            >Blog</a>
+                        </li>
+                        <li>
+                            <a 
+                                href="/contacto"
+                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                            >Contacto</a>
+                        </li>
+                        <li>
+                            <a 
+                                target="_BLANK"    
+                                href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..."
+                                class="text-secondary hover:text-accent transition-all duration-300"
+                            >WhastApp</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section 
+        class="hero bg-gray-200 py-12 xl:pt-12 xl:pb-0 overflow-hidden">
+        <div class="container mx-auto h-full">
+            <!-- Text & Img -->
+            <div class="flex flex-col xl:flex-row items-center justify-between h-full">
+                <!-- Text -->
+                <div class="hero__text xl:w-[48%] text-center xl:text-left">
+                    <!-- Badge icon -->
+                    <div 
+                        class="flex items-center bg-white py-[10px] px-[20px] w-max gap-x-2 mb-[26px] rounded-full mx-auto xl:mx-0">
+                        <i class="ri-heart-pulse-line text-2xl text-accent"></i>
+                        <div class="uppercase text-base font-medium text-[#9ab4b7] tracking-[2. 24px]">
+                            Amor por tu mascota
+                        </div>
+                    </div>
+                    <!-- Title -->
+                    <h1 class="h1 mb-6">Tu Veterinaria en Rosario</h1>
+                    <!-- Desc -->
+                    <p class="mb-[42px] md:max-w-xl">CIVet es el Centro Integral Veterinario líder en el cuidado de mascotas en Rosario. A cargo del <span class="text-accent-tertiary">Dr. Julian Pedemonte</span> </p>
+                    <!-- Btn -->
+                    <button id="appoinmentBtn2" class=" btn btn-lg btn-accent mx-auto xl:mx-0">AGENDA TU TURNO</button>
+                </div>
+                <!-- img -->
+                <div class="hero__img hidden xl:flex max-w-[814px] self-end">
+                    <!-- <img src="assets/img/hero/img.png" alt=""> -->
+                    <img src="assets/img/hero/dogcat.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End hero -->
+
+    <!-- Stats -->
+    <section 
+        class="stats pt-[100px]">
+        <div class="container mx-auto">
+            <!-- Wrapper -->
+            <div class="flex flex-col xl:flex-row gap-y-6 justify-between">
+                <!-- item -->
+                <div 
+                    class="stats__item flex-1 xl:border-r flex flex-col items-center">
+                    <div class="text-4xl xl:text[64px] font-semibold text-accent-tertiary xl:mb-2">+7200</div>
+                    <div>Mascotas felices</div>
+                </div>
+                <!-- item -->
+                <div 
+                    class="stats__item flex-1 xl:border-r flex flex-col items-center">
+                    <div class="text-4xl xl:text[64px] font-semibold text-accent-tertiary xl:mb-2">+620</div>
+                    <div>MicroChips Colocados</div>
+                </div>
+                <!-- item -->
+                <div 
+                    class="stats__item flex-1 xl:border-r flex flex-col items-center">
+                    <div class="text-4xl xl:text[64px] font-semibold text-accent-tertiary xl:mb-2">+3100</div>
+                    <div>Cirugias Realizadas</div>
+                </div>
+                <!-- item -->
+                <div 
+                    class="stats__item flex-1 flex flex-col items-center">
+                    <div class="text-4xl xl:text[64px] font-semibold text-accent-tertiary xl:mb-2">+27</div>
+                    <div>Años de Trayectoria</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End stats -->
+
+    <!-- Services -->
+    <section 
+        class="services section"
+        id="servicesSection">
+        <!-- bg -->
+        <div
+            class="bg-accent bg-cover bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[20px] xl:pt-[70px] px-6
+            xl:px-0 relative h-[368px] flex items-center xl:items-start -z-10"
+            >
+            <!-- Pattern -->
+            <div class="absolute left-0 bottom-0">
+                <img src="/assets/img/newsletter/pattern.svg" alt="">
+            </div> 
+            <div class="container mx-auto">
+                <!-- text -->
+                <div
+                    class="services__top flex items-center flex-col xl:flex-row xl:mb-[60px]">
+                    <h2 class="h2 text-white flex-1 mb-4 xl:mb-0 text-center xl:text-left">Nuestros servicios veterinarios</h2>
+                    <p class="text-white flex-1 text-center xl:text-left max-w-2xl xl:max-w-none">
+                        En CIVet ofrecemos todos los servicios veterinarios necesarios para el cuidado de tu mascota.
+                        Desde consultas generales hasta urgencias 24hs a domicilio.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- grid container -->
+        <div class="container mx-auto mt-8 xl:-mt-[144px]">
+            <!-- grid -->
+            <div class="grid xl:grid-cols-4 gap-5 px-8 xl:px-0">
+                <!-- grid item -->
+                <div
+                    class="services__item bg-white p-[30px] rounded-[10px] 
+                    shadow-custom2 min-h-[288px] flex flex-col items-center text-center">
+                    <!-- Grid item icon -->
+                    <div class="mb-[15px]">
+                        <img src="assets/icons/services/home.svg" alt="">
+                    </div>
+                    <!-- grid item title -->
+                    <h3 class="h3 mb-[10px]">
+                        Urgencias Veterinarias 24hs a Domicilio
+                    </h3>
+                    <!-- grid item -->
+                    <p class="font-light leading-normal max-w-[300px]">
+                        <b class="text-accent">(0341) 640-2289</b>
+                        <br>
+                        Línea para <span class="text-accent-tertiary">URGENCIAS 24hs</span> a domicilio
+                    </p>
+                </div>
+                <!-- grid item -->
+                <div
+                    class="services__item bg-white p-[30px] rounded-[10px] 
+                    shadow-custom2 min-h-[288px] flex flex-col items-center text-center">
+                    <!-- Grid item icon -->
+                    <div class="mb-[15px]">
+                        <img src="assets/icons/services/stethoscope.svg" alt="">
+                    </div>
+                    <!-- grid item title -->
+                    <h3 class="h3 mb-[10px]">
+                        Centro de Cirugía & Internación
+                    </h3>
+                    <!-- grid item -->
+                    <p class="font-light leading-normal max-w-[300px]">
+                       Centro de cirugía e internación con un nuevo y moderno equipamiento. Videomonitoreo de internaciones 24 hs.
+                    </p>
+                </div>
+                <!-- grid item -->
+                <div
+                    class="services__item bg-white p-[30px] rounded-[10px] 
+                    shadow-custom2 min-h-[288px] flex flex-col items-center text-center">
+                    <!-- Grid item icon -->
+                    <div class="mb-[15px]">
+                        <img src="assets/icons/services/pill.svg" alt="">
+                    </div>
+                    <!-- grid item title -->
+                    <h3 class="h3 mb-[10px]">
+                        Farmacia Veterinaria
+                    </h3>
+                    <!-- grid item -->
+                    <p class="font-light leading-normal max-w-[300px]">
+                        Todos los medicamentos y productos necesarios para el cuidado de tu mascota.
+                    </p>
+                </div>
+                <!-- grid item -->
+                <div
+                    class="services__item bg-white p-[30px] rounded-[10px] 
+                    shadow-custom2 min-h-[288px] flex flex-col items-center text-center">
+                    <!-- Grid item icon -->
+                    <div class="mb-[15px]">
+                        <img src="assets/icons/services/bath.svg" alt="">
+                    </div>
+                    <!-- grid item title -->
+                    <h3 class="h3 mb-[10px]">
+                        Peluquería Canina
+                    </h3>
+                    <!-- grid item description-->
+                    <p class="font-light leading-normal max-w-[300px]">
+                        Servicio de peluquería canina con los mejores profesionales y productos de calidad.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End services -->
+
+    <!-- Departmens -->
+    <section 
+        class="departments section mx-4">
+        <div
+            class=" departments__bg bg-purple-100 bg-cover xl:bg-auto bg-center bg-no-repeat xl:max-w-[1466px] max-w-[870px]
+            mx-auto rounded-[20px] px-6 xl:px-0 pt-12 relative min-h-[588px] flex items-center">
+            <div class="departments__container container mx-auto">
+                <div class="flex flex-col xl:flex-row gap-x-5">
+                    <div class="hidden">
+                        <div 
+                            class="xl:w-[310px] flex flex-col gap-y-[30px] xl:gap-y-[40px] font-medium 
+                            uppercase text-center xl:text-left text-base text-[#9ab4b7] xl:pt-3 xl:text-[17px]
+                            mb-[50px] xl:mb-0">
+                            <div class="cursor-pointer hover:text-accent transition-all">MicroChip</div>
+                            <div class="cursor-pointer hover:text-accent transition-all">Certificados</div>
+                            <div class="cursor-pointer hover:text-accent transition-all">Vacunación</div>
+                        </div>
+                    </div>
+                    <div class="xl:w-[900px] ">
+                        <!-- Title -->
+                        <h2 class="h2 mb-[20px] text-center xl:text-left capitalize">MicroChip para Perros & Gatos</h2>
+                        <!-- Description -->
+                        <p class="font-light text-center xl:text-left mb-[5px]">
+                            En CIVet realizamos todo lo necesario para que viajes con tu mascota. 
+                        </p>
+                        <p class="font-light text-center xl:text-left mb-[5px]">
+                            Contamos con amplia experiencia en la colocación de microchip y certificados para viajar con tu mascota. Tambien aplicamos las vacunas necesarias para que viajes a cualqueir destino.
+                        </p>
+                        <p class="font-light text-center xl:text-left mb-[30px]">
+                            <span class="text-accent-tertiary">Viaja con tu mascota sin preocupaciones!</span>
+                        </p>
+                        <div class="flex flex-col xl:flex-row items-center xl:justify-between max-w-[400px] mb-[50px] mx-auto xl:mx-0">
+                            <div class="text-accent xl:border-r border-[#dcdcdc] xl:pr-6">MicroChips</div>
+                            <div class="text-accent xl:border-r border-[#dcdcdc] xl:pr-6">Certificados</div>
+                            <div class="text-accent">Vacunación</div>
+                        </div>
+                        <button class="btn btn-lg btn-accent mx-auto xl:mx-0">Saber mas</button>
+                    </div>
+                    <div class="xl:w-[800px] xl:mr-0 xl:mt-0 w-[290px] mx-auto mt-10">
+                        <img src="assets/img/departments/travel.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End departments -->
+
+    <!-- Contact -->
+    <section 
+        class="hidden contact section">
+        <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+            <div class="max-w-xl space-y-3">
+                <h2 class="contacto__title h2 mb-[50px] text-center xl:text-left">
+                    Contacto
+                </h2>
+            </div>
+            <div class="mt-12">
+                <!-- Wrapper -->
+                <ul class="grid gap-x-12 divide-y [&>.feature-1]:pl-0 sm:grid-cols-2 sm:gap-y-8 sm:divide-y-0 lg:divide-x lg:grid-cols-3 lg:gap-x-0">
+                    <!-- Item 1 -->
+                    <li class="space-y-3 py-8 lg:px-12 sm:py-0`">
+                        <!-- Icon -->
+                        <div class="w-12 h-12 border text-indigo-600 rounded-full flex items-center justify-center">
+                            icon
+                        </div>
+                        <!-- Title -->
+                        <h4 class="text-lg text-gray-800 font-semibold">
+                            Urgencias Veterinarias 24hs a Domicilio
+                        </h4>
+                        <!-- desc -->
+                        <p> 
+                            desc
+                        </p>
+                    </li>
+                    <!-- Item 1 -->
+                    <li class="space-y-3 py-8 lg:px-12 sm:py-0`">
+                        <!-- Icon -->
+                        <div class="w-12 h-12 border text-indigo-600 rounded-full flex items-center justify-center">
+                            icon
+                        </div>
+                        <!-- Title -->
+                        <h4 class="text-lg text-gray-800 font-semibold">
+                            title
+                        </h4>
+                        <!-- desc -->
+                        <p> 
+                            desc
+                        </p>
+                    </li>
+                    <!-- Item 1 -->
+                    <li class="space-y-3 py-8 lg:px-12 sm:py-0`">
+                        <!-- Icon -->
+                        <div class="w-12 h-12 border text-indigo-600 rounded-full flex items-center justify-center">
+                            icon
+                        </div>
+                        <!-- Title -->
+                        <h4 class="text-lg text-gray-800 font-semibold">
+                            title
+                        </h4>
+                        <!-- desc -->
+                        <p> 
+                            desc
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End contact -->
+
+    <!-- Oculto -->
+    <!-- Shop -->
+    <section 
+        class="shop hidden">
+        <div class="container mx-auto">
+            <h2 class="shop__title h2 mb-[50px] text-center xl:text-left capitalize">
+                Tienda de mascotas
+            </h2>
+            <!-- Blog posts -->
+            <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 items-center xl:justify-between mb-[50px]">
+                <!-- Post 1 -->
+                <div
+                    class="shop__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+                    <!-- img -->
+                    <div 
+                        class="relative overflow-hidden">
+                        <img
+                            class="group-hover:scale-110 transition-all duration-500"
+                            src="assets/img/blog/img-2.png" alt="">
+                        <!-- badge -->
+                        <div 
+                            class="bg-accent-tertiary absolute bottom-0 left-0 text-white 
+                            text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                            Medical
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="px-5 py-6">
+                        <!-- Title -->
+                        <h4 class="h4 mb-[10px]">Tips para vacacionar con tu mascota</h4>
+                        <!-- Description -->
+                        <p class="font-light">
+                            Tips para irte de vacaiones con tu mascota sin preocupaciones.
+                            <a href="#" class="italic underline text-[#4c5354]">Leer mas</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Post 2 -->
+                <div
+                    class="shop__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+                    <!-- img -->
+                    <div 
+                        class="relative overflow-hidden">
+                        <img
+                            class="group-hover:scale-110 transition-all duration-500"
+                            src="assets/img/blog/img-1.png" alt="">
+                        <!-- badge -->
+                        <div 
+                            class="bg-accent-tertiary absolute bottom-0 left-0 text-white 
+                            text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                            Medical
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="px-5 py-6">
+                        <!-- date -->
+                        <div>Enero 12, 2024</div>
+                        <!-- Title -->
+                        <h4 class="h4 mb-[10px]">10 comidas prohibidas para tu perro</h4>
+                        <!-- Description -->
+                        <p class="font-light">
+                            Es muy importante saber que comidas puede comer tu perro y cuales estan PROHIBIDAS.
+                            <a href="#" class="italic underline text-[#4c5354]">Leer mas</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Post 3 -->
+                <div
+                    class="shop__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+                    <!-- img -->
+                    <div 
+                        class="relative overflow-hidden">
+                        <img
+                            class="group-hover:scale-110 transition-all duration-500"
+                            src="assets/img/blog/img-3.png" alt="">
+                        <!-- badge -->
+                        <div 
+                            class="bg-accent-tertiary absolute bottom-0 left-0 text-white 
+                            text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                            Higiene
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="px-5 py-6">
+                        <!-- date -->
+                        <div>Enero 12, 2024</div>
+                        <!-- Title -->
+                        <h4 class="h4 mb-[10px]">Asi realizamos una limpieza dental</h4>
+                        <!-- Description -->
+                        <p class="font-light">
+                            Te explicamos el procedimento de una limpieza dental a tu mascota.
+                            <a href="#" class="italic underline text-[#4c5354]">Leer mas</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End shop -->
+
+    <!-- Appoinment -->
+    <section 
+        class="appoinment section"
+        id="appoinment">
+        <div class="container mx-auto">
+            <h2 class="appoinment__title h2 mb-[50px] text-center xl:text-left">
+                Agendá tu Consulta Veterinaria
+            </h2>
+            <div class="appoinment__container">
+                <!-- Principio del widget integrado de Calendly -->
+                <div class="shadow-custom2 h-[1100px] lg:h-[700px] calendly-inline-widget" data-url="https://calendly.com/civetrosario/consulta" ></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Final del widget integrado de Calendly -->
+            </div>
+        </div>
+
+    </section>
+    <!-- End Appoinment -->
+
+    <!-- Oculto -->
+    <!-- Blog -->
+    <section 
+        class="blog hidden">
+        <div class="container mx-auto">
+            <h2 class="blog__title h2 mb-[50px] text-center xl:text-left">
+                Nuestras publicaciones
+            </h2>
+            <!-- Blog posts -->
+            <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 items-center xl:justify-between mb-[50px]">
+                <!-- Post 1 -->
+                <div
+                    class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+                    <!-- img -->
+                    <div 
+                        class="relative overflow-hidden">
+                        <img
+                            class="group-hover:scale-110 transition-all duration-500"
+                            src="assets/img/blog/img-2.png" alt="">
+                        <!-- badge -->
+                        <div 
+                            class="bg-accent-tertiary absolute bottom-0 left-0 text-white 
+                            text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                            Medical
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="px-5 py-6">
+                        <!-- date -->
+                        <div>Enero 12, 2024</div>
+                        <!-- Title -->
+                        <h4 class="h4 mb-[10px]">Tips para vacacionar con tu mascota</h4>
+                        <!-- Description -->
+                        <p class="font-light">
+                            Tips para irte de vacaiones con tu mascota sin preocupaciones.
+                            <a href="#" class="italic underline text-[#4c5354]">Leer mas</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Post 2 -->
+                <div
+                    class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+                    <!-- img -->
+                    <div 
+                        class="relative overflow-hidden">
+                        <img
+                            class="group-hover:scale-110 transition-all duration-500"
+                            src="assets/img/blog/img-1.png" alt="">
+                        <!-- badge -->
+                        <div 
+                            class="bg-accent-tertiary absolute bottom-0 left-0 text-white 
+                            text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                            Medical
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="px-5 py-6">
+                        <!-- date -->
+                        <div>Enero 12, 2024</div>
+                        <!-- Title -->
+                        <h4 class="h4 mb-[10px]">10 comidas prohibidas para tu perro</h4>
+                        <!-- Description -->
+                        <p class="font-light">
+                            Es muy importante saber que comidas puede comer tu perro y cuales estan PROHIBIDAS.
+                            <a href="#" class="italic underline text-[#4c5354]">Leer mas</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Post 3 -->
+                <div
+                    class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+                    <!-- img -->
+                    <div 
+                        class="relative overflow-hidden">
+                        <img
+                            class="group-hover:scale-110 transition-all duration-500"
+                            src="assets/img/blog/img-3.png" alt="">
+                        <!-- badge -->
+                        <div 
+                            class="bg-accent-tertiary absolute bottom-0 left-0 text-white 
+                            text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                            Higiene
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="px-5 py-6">
+                        <!-- date -->
+                        <div>Enero 12, 2024</div>
+                        <!-- Title -->
+                        <h4 class="h4 mb-[10px]">Asi realizamos una limpieza dental</h4>
+                        <!-- Description -->
+                        <p class="font-light">
+                            Te explicamos el procedimento de una limpieza dental a tu mascota.
+                            <a href="#" class="italic underline text-[#4c5354]">Leer mas</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End blog -->
+
+    <!-- Newsletter -->
+    <section 
+        class="newsletter bg-accent md:h-[444px] py-12 flex items-center relative overflow-hidden">
+        <!-- Pattern -->
+        <div class="absolute left-0 bottom-0">
+            <img src="/assets/img/newsletter/pattern.svg" alt="">
+        </div>
+        <!-- Container -->
+        <div class="newsletter__container container mx-auto">
+            <!-- Wrapper -->
+            <div class="flex flex-col lg:flex-row lg:items-center lg:gap-x-[58px]">
+                <!-- text -->
+                <div class="flex-1 z-10 text-center md:text-left">
+                    <div class="text-base uppercase text-white tracking-[2.24px] font-medium">
+                        Nuestra newsletter
+                    </div>
+                    <h1 class="h1 mb-4 text-white">
+                        Suscribite para mas información
+                    </h1>
+                </div>
+                <!-- form -->
+                <form action="" class="flex-1">
+                    <div class="flex flex-col md:flex-row relative gap-y-4">
+                        <input type="text"
+                        placeholder="Ingresa tu email..."
+                        class="rounded-full w-full h-[66px] bg-transparent border-2 border-white outline-none pl-[30px] 
+                        placeholder:text-white focus:text-white">
+                        <button class="btn btn-lg btn-white md:absolute right-0">
+                            Suscribite
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer 
+        class="footer pt-12 xl:pt-[150px]">
+        <div class="container mx-auto pb-12 xl:pb-[100px]">
+            <div class="flex flex-col xl:flex-row gap-x-5 gap-y-10">
+                <!-- Footer contact section -->
+                <div class="footer__item flex-1">
+                    <!-- Logo -->
+                    <a href="">
+                        <img class="w-32" src="assets/img/header/Logo color.png " alt="">
+                    </a>
+                    <!-- Description -->
+                    <p class="mb[20px]">
+                        Centro Integral Veterinario Líder en Rosario 
+                    </p>
+                    <!-- Location, email & phone-->
+                    <div class="flex flex-col gap-y-3 mb-10">
+                        <a
+                            href="https://www.google.com/maps?um=1&fb=1&gl=ar&sa=X&geocode=KQki7LJyq7eVMVshYZSjgMJt&daddr=Pasco+1851,+S2000+Rosario,+Santa+Fe&ved=2ahUKEwjE57KKiqaEAxWcuJUCHRbyD5oQiBN6BQgAEIMB" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-map-pin-fill text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">Pasco 1851, Rosario, Santa Fe</div>
+                        </a>
+                        <a
+                            href="mailto:civetpedemonte@gmail.com" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-mail-fill text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">civetpedemonte@gmail.com</div>
+                        </a>
+                        <a
+                            href="tel:4851242" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-phone-fill text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">4851242 </div>
+                        </a>
+                        <a
+                            href="tel:03416402289" 
+                            class="flex items-center gap-x-[6px]">
+                            <i class="ri-24-hours-line text-[24px] text-accent"></i>
+                            <div class="hover:text-accent-secondary">(0341) 640-2289</div>
+                        </a>
+                        
+                    </div>
+                    <!-- Socials -->
+                    <div class="flex gap-[14px] text-[30px]">
+                        <!-- Social 1 -->
+                        <a 
+                            target="_BLANK"
+                            href="https://www.facebook.com/civetrosario"
+                            class="p-[10px] rounded-[10px] shadow-custom2 
+                            text-accent-secondary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-facebook-circle-line"></i>
+                        </a>
+                        <!-- Social 2 -->
+                        <a 
+                            target="_BLANK"
+                            href="https://www.instagram.com/civetrosario/"
+                            class="p-[10px] rounded-[10px] shadow-custom2 
+                            text-accent-secondary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <!-- Social 3 -->
+                        <a 
+                            target="_BLANK"
+                            href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..."
+                            class="p-[10px] rounded-[10px] shadow-custom2 
+                            text-accent-secondary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <!-- Footer quick links section -->
+                <div class="footer__item flex-1">
+                    <h4 class="h4 mb-5">Acceso rapido</h4>
+                    <div>
+                        <ul class="flex-1 flex flex-col gap-y-5">
+                            <li><a href="#" class="hover:text-accent transition-all">Inicio</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Veterinarios</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Servicios</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Blog</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer opening hours section -->
+                <div class="footer__item flex-1">
+                    <h4 class="h4 mb-5">Horarios de Atención</h4>
+                    <!-- List -->
+                    <div class="flex flex-col gap-5">
+                        <!-- Item -->
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Lunes - Viernes</div>
+                                <div class="text-accent font-medium">9am - 12.30pm  |  16.30 - 20pm</div>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Sabado</div>
+                                <div class="text-accent font-medium">9am - 13pm  |  17 - 19pm</div>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Domingo</div>
+                                <div class="text-accent font-medium">Cerrado</div>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Urgencias 24hs</div>
+                                <div class="text-accent font-medium">(0341) 640-2289</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="py-[30px] border-t">
+            <div class="container mx-auto text-center">
+                <div class="font-ligth text-base">
+                    Diseñado por <a target="_BLANK" href="https://www.linkedin.com/in/santiagopedemonte/" class="text-accent">Pedemonte Santiago</a>
+                    <br>
+                    &copy; 2024 CIVet - Todos los derechos reservados
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    
+    <!-- WhatsApp Float -->
+    <div 
+        class="bg-transparent w-[80px] h-[80px] fixed rounded-full sm:right-10 sm:bottom-10 right-5 bottom-5">
+        <a target="_BLANK" href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar...">
+            <img src="assets/icons/whatsapp/whatsapp.svg" alt="">
+        </a>
+    </div>
+    
+    <!-- Scripts -->
+    <!-- swiper js -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- scroll reveal -->
+    <script src="js/scrollreveal.min.js"></script>
+    <!-- main -->
+    <script src="js/main.js"></script>
+</body>
+</html>
