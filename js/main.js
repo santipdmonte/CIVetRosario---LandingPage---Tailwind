@@ -101,6 +101,22 @@ document.getElementById('servicesNavBtn').addEventListener('click', function () 
     });
 });
 
+document.getElementById('servicesNavBtnFooter').addEventListener('click', function () {
+    document.querySelector('#servicesSection').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+document.getElementById('servicesNavMobileBtn').addEventListener('click', function () {
+    mobileNav.classList.toggle(navOpenedClass);
+    mobileNav.classList.toggle(navClosedClass);
+
+    closeBtnIcn.classList.toggle(arrowRightClass);
+    closeBtnIcn.classList.toggle(arrowLeftClass);
+    document.querySelector('#servicesSection').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
 
 // Departments
 sr.reveal('.departments__bg');

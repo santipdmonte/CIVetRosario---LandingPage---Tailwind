@@ -74,7 +74,7 @@
                     <!-- nav content -->
                     <div class="px-12 flex flex-col gap-y-12 h-full">
                         <!-- Logo -->
-                        <a href="#">
+                        <a href="/">
                             <!-- <img src="assets/img/header/logo.svg" alt=""> -->
                             <img class="h-28" src="./assets/img/header/Logo color.png" alt="">
                         </a>
@@ -82,11 +82,11 @@
                         <ul class="flex flex-col gap-y-5">
                             <li>
                                 <a 
-                                    href="#"
+                                    href="/"
                                     class="text-secondary hover:text-accent transition-all duration-300"
                                 >Inicio</a>
                             </li>
-                            <li>
+                            <li class="hidden">
                                 <a 
                                     href="#"
                                     class="text-secondary hover:text-accent transition-all duration-300"
@@ -94,8 +94,8 @@
                             </li>
                             <li>
                                 <a 
-                                    href="#"
-                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                    id="servicesNavMobileBtn"
+                                    class="text-secondary hover:text-accent transition-all duration-300 cursor-pointer"
                                 >Servicios</a>
                             </li>
                             <!-- Oculta -->
@@ -107,7 +107,7 @@
                             </li>
                             <li>
                                 <a 
-                                    href="#"
+                                    href="/contacto"
                                     class="text-secondary hover:text-accent transition-all duration-300"
                                 >Contacto</a>
                             </li>
@@ -143,9 +143,8 @@
                         </li>
                         <li>
                             <a 
-                                id="servicesNavBtn"
-                                href="/"
-                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                                id="servicesNavBtn"                               
+                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300 cursor-pointer"
                             >Servicios</a>
                         </li>
                         <!-- Oculta -->
@@ -157,7 +156,7 @@
                         </li>
                         <li>
                             <a 
-                                href="#"
+                                href="/contacto"
                                 class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
                             >Contacto</a>
                         </li>
@@ -323,7 +322,7 @@
                     </a>
                     <!-- Description -->
                     <p class="mb[20px]">
-                        Centro Integral Veterinario Lider en Rosario 
+                        Centro Integral Veterinario Líder en Rosario 
                     </p>
                     <!-- Location, email & phone-->
                     <div class="flex flex-col gap-y-3 mb-10">
@@ -388,11 +387,11 @@
                     <h4 class="h4 mb-5">Acceso rapido</h4>
                     <div>
                         <ul class="flex-1 flex flex-col gap-y-5">
-                            <li><a href="#" class="hover:text-accent transition-all">Inicio</a></li>
-                            <li><a href="#" class="hover:text-accent transition-all">Veterinarios</a></li>
-                            <li><a href="#" class="hover:text-accent transition-all">Servicios</a></li>
-                            <li><a href="#" class="hover:text-accent transition-all">Blog</a></li>
-                            <li><a href="#" class="hover:text-accent transition-all">Contacto</a></li>
+                            <li><a href="/" class="hover:text-accent transition-all">Inicio</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all hidden">Veterinarios</a></li>
+                            <li><a id="servicesNavBtnFooter" class="hover:text-accent transition-all cursor-pointer">Servicios</a></li>
+                            <li><a href="#" class="hover:text-accent transition-all hidden">Blog</a></li>
+                            <li><a href="/contacto" class="hover:text-accent transition-all">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
@@ -430,6 +429,8 @@
         <div class="py-[30px] border-t">
             <div class="container mx-auto text-center">
                 <div class="font-ligth text-base">
+                    Diseñado por <a target="_BLANK" href="https://www.linkedin.com/in/santiagopedemonte/" class="text-accent">Pedemonte Santiago</a>
+                    <br>
                     &copy; 2024 CIVet - Todos los derechos reservados
                 </div>
             </div>
