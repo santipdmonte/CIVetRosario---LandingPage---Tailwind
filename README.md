@@ -1,7 +1,7 @@
 # Civet Rosario
 
 Landing page para una veterinaria de Rosario. 
-https://civetrosario.com/
+https://civetrosario.com
 
 ![image](https://github.com/santipdmonte/CIVetRosario-LandingPage-Tailwind/assets/102166963/c459ed23-1a4d-4ef5-91e2-f5d2cf58deea)
 
