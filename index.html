@@ -45,7 +45,7 @@
         >
             <!-- Logo -->
             <div class="flex justify-center lg:justify-normal">
-                <a href="/">
+                <a href="/" aria-label="Ir a la pagina principal de inicio" aria-label="Ir a la pagina principal de inicio">
                     <img class="h-28" src="assets/img/header/Logo-color.webp" alt="">
                 </a>
             </div>
@@ -85,14 +85,14 @@
                     <!-- nav content -->
                     <div class="px-12 flex flex-col gap-y-12 h-full">
                         <!-- Logo -->
-                        <a href="/">
+                        <a href="/" aria-label="Ir a la pagina principal de inicio">
                             <img class="h-28" src="assets/img/header/Logo-color.webp" alt="">
                         </a>
                         <!-- List -->
                         <ul class="flex flex-col gap-y-5">
                             <li>
                                 <a 
-                                    href="/"
+                                    href="/" aria-label="Ir a la pagina principal de inicio"
                                     class="text-secondary hover:text-accent transition-all duration-300"
                                 >Inicio</a>
                             </li>
@@ -147,7 +147,7 @@
                     <ul class="flex gap-x-4">
                         <li>
                             <a 
-                                href="/"
+                                href="/" aria-label="Ir a la pagina principal de inicio"
                                 class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
                             >Inicio</a>
                         </li>
@@ -663,6 +663,7 @@
                         <a 
                             target="_BLANK"
                             href="https://www.facebook.com/civetrosario"
+                            aria-label="Ir a la pagina de facebook de civetrosario"
                             class="p-[10px] rounded-[10px] shadow-custom2 
                             text-accent-secondary hover:text-accent cursor-pointer transition-all">
                             <i class="ri-facebook-circle-line"></i>
@@ -671,6 +672,7 @@
                         <a 
                             target="_BLANK"
                             href="https://www.instagram.com/civetrosario/"
+                            aria-label="Ir a la pagina de instagram de civetrosario"
                             class="p-[10px] rounded-[10px] shadow-custom2 
                             text-accent-secondary hover:text-accent cursor-pointer transition-all">
                             <i class="ri-instagram-line"></i>
@@ -679,6 +681,7 @@
                         <a 
                             target="_BLANK"
                             href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..."
+                            aria-label="Ir al whatsapp de civetrosario"
                             class="p-[10px] rounded-[10px] shadow-custom2 
                             text-accent-secondary hover:text-accent cursor-pointer transition-all">
                             <i class="ri-whatsapp-line"></i>
@@ -692,7 +695,7 @@
                     <h4 class="h4 mb-5">Acceso rápido</h4>
                     <div>
                         <ul class="flex-1 flex flex-col gap-y-3">
-                            <li><a href="/" class="hover:text-accent transition-all">Inicio</a></li>
+                            <li><a href="/" aria-label="Ir a la pagina principal de inicio" class="hover:text-accent transition-all">Inicio</a></li>
                             <li class="hidden"><a href="#" class="hover:text-accent transition-all">Veterinarios</a></li>
                             <li><a id="servicesNavBtnFooter" class="hover:text-accent transition-all cursor-pointer">Servicios</a></li>
                             <li class="hidden"><a href="#" class="hover:text-accent transition-all">Blog</a></li>
@@ -752,7 +755,10 @@
     <!-- WhatsApp Float -->
     <div 
         class="bg-transparent w-[80px] h-[80px] fixed rounded-full sm:right-10 sm:bottom-10 right-5 bottom-5">
-        <a target="_BLANK" href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar...">
+        <a 
+            target="_BLANK" 
+            href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..."
+            aria-label="Ir al whatsapp de civetrosario">
             <img src="assets/icons/whatsapp/whatsapp.svg" alt="">
         </a>
     </div>
