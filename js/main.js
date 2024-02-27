@@ -83,13 +83,13 @@ sr.reveal('.newsletter', {delay: 0, duration: 2000});
 
 
 // Click directions
-document.getElementById('servicesNavBtn').addEventListener('click', function () {
+document.getElementById('servicesNavBtnFooter').addEventListener('click', function () {
     document.querySelector('#servicesSection').scrollIntoView({
         behavior: 'smooth'
     });
 });
 
-document.getElementById('servicesNavBtnFooter').addEventListener('click', function () {
+document.getElementById('servicesNavBtn').addEventListener('click', function () {
     document.querySelector('#servicesSection').scrollIntoView({
         behavior: 'smooth'
     });
