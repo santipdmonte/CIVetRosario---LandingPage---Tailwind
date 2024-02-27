@@ -15,24 +15,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const arrowLeftClass = 'ri-arrow-left-s-line';
     const arrowRightClass = 'ri-arrow-right-s-line';
     
-    closeBtn.addEventListener('click', () => {
-        
+    function toggleNav() {
+        mobileNav.classList.toggle(navOpenedClass);
+        mobileNav.classList.toggle(navClosedClass);
+        closeBtnIcn.classList.toggle(arrowLeftClass);
+        closeBtnIcn.classList.toggle(arrowRightClass);
+    }
+
+    closeBtn.addEventListener('click', function() {
         if (mobileNav.classList.contains(navClosedClass)) {
-            
             mobileNav.classList.toggle(navClosedClass);
             mobileNav.classList.toggle(navOpenedClass);
-            
-            closeBtnIcn.classList.toggle(arrowLeftClass);
-            closeBtnIcn.classList.toggle(arrowRightClass);
+        } else {
+            toggleNav();
         }
-        else {
-            mobileNav.classList.toggle(navOpenedClass);
-            mobileNav.classList.toggle(navClosedClass);
-            
-            closeBtnIcn.classList.toggle(arrowRightClass);
-            closeBtnIcn.classList.toggle(arrowLeftClass);
-        }
-        
+    });
+
+    // Click directions
+    function goto_services() {
+        document.querySelector('#servicesSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    btnServicesFooter.addEventListener('click', goto_services);
+
+    btnServicesNav.addEventListener('click', goto_services);
+
+    btnServicesMobileNav.addEventListener('click', function () {
+        toggleNav();
+        goto_services()
     });
     
     
@@ -87,32 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Newsletter
     sr.reveal('.newsletter', {delay: 0, duration: 2000});
-
-
-    // Click directions
-    function goto_services() {
-        document.querySelector('#servicesSection').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-
-    btnServicesFooter.addEventListener('click', function () {
-        goto_services()
-    });
-
-    btnServicesNav.addEventListener('click', function () {
-        goto_services()
-    });
-
-    btnServicesMobileNav.addEventListener('click', function () {
-        mobileNav.classList.toggle(navOpenedClass);
-        mobileNav.classList.toggle(navClosedClass);
-        
-        closeBtnIcn.classList.toggle(arrowRightClass);
-        closeBtnIcn.classList.toggle(arrowLeftClass);
-        goto_services()
-    });
-
 
     // Departments
     sr.reveal('.departments__bg');
