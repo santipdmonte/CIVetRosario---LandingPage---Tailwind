@@ -87,6 +87,7 @@ document.getElementById('servicesNavBtnFooter').addEventListener('click', functi
     document.querySelector('#servicesSection').scrollIntoView({
         behavior: 'smooth'
     });
+    console.log('click');
 });
 
 document.getElementById('servicesNavBtn').addEventListener('click', function () {
