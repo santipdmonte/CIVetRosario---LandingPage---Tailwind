@@ -66,11 +66,11 @@
                     <a class="text-secondary hover:text-accent-secondary transition-all duration-300" href="tel:4851242">4851242</a>
                 </div>
                 <!-- btn -->
-                <div class="hidden lg:flex items-center">
-                    <button id="appoinmentBtn" class="btn btn-sm btn-outline w-[260px] lg:w-auto mx-auto lg:mx-0">
+                <a href="/turnos" class="hidden lg:flex items-center">
+                    <button class="btn btn-sm btn-outline w-[260px] lg:w-auto mx-auto lg:mx-0">
                         Agenda tu turno  
                     </button>
-                </div>
+                </a>
 
                 <!-- mobile nav -->
                 <nav class="mnav bg-white fixed w-[300px] top-0 h-screen 
@@ -122,6 +122,12 @@
                                     href="/contacto"
                                     class="text-secondary hover:text-accent transition-all duration-300"
                                 >Contacto</a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="/turnos"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Turnos</a>
                             </li>
                             <li>
                                 <a 
@@ -207,7 +213,9 @@
                     <!-- Desc -->
                     <p class="mb-[42px] md:max-w-xl">CIVet es el Centro Integral Veterinario líder en el cuidado de mascotas en Rosario. A cargo del <span class="text-accent-tertiary">Dr. Julian Pedemonte</span> </p>
                     <!-- Btn -->
-                    <button id="appoinmentBtn2" class=" btn btn-lg btn-accent mx-auto xl:mx-0">AGENDA TU TURNO</button>
+                    <a href="/turnos">
+                        <button id="appoinmentBtn2" class=" btn btn-lg btn-accent mx-auto xl:mx-0">AGENDA TU TURNO</button>
+                    </a>
                 </div>
                 <!-- img -->
                 <div class="hero__img hidden xl:flex max-w-[814px] self-end">
@@ -570,25 +578,6 @@
     </section>
     <!-- End shop -->
 
-    <!-- Appoinment -->
-    <section 
-        class="appoinment section"
-        id="appoinment">
-        <div class="container mx-auto">
-            <h2 class="appoinment__title h2 mb-[50px] text-center xl:text-left">
-                Agendá tu Consulta Veterinaria
-            </h2>
-            <div class="appoinment__container">
-                <!-- Principio del widget integrado de Calendly -->
-                <div class="shadow-custom2 h-[1100px] lg:h-[700px] calendly-inline-widget" data-url="https://calendly.com/civetrosario/consulta" ></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                <!-- Final del widget integrado de Calendly -->
-            </div>
-        </div>
-
-    </section>
-    <!-- End Appoinment -->
-
     <!-- Oculto -->
     <!-- Blog -->
     <section 
@@ -810,6 +799,7 @@
                             <li><a id="servicesNavBtnFooter" class="hover:text-accent transition-all cursor-pointer">Servicios</a></li>
                             <li class="hidden"><a href="#" class="hover:text-accent transition-all">Blog</a></li>
                             <li><a href="/contacto" class="hover:text-accent transition-all">Contacto</a></li>
+                            <li><a href="/turnos" class="hover:text-accent transition-all">Turnos</a></li>
                             <li><a 
                                 target="_BLANK"
                                 href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..." 
