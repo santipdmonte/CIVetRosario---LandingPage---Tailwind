@@ -83,18 +83,6 @@ sr.reveal('.newsletter', {delay: 0, duration: 2000});
 
 
 // Click directions
-document.getElementById('appoinmentBtn').addEventListener('click', function () {
-    document.querySelector('#appoinment').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-
-document.getElementById('appoinmentBtn2').addEventListener('click', function () {
-    document.querySelector('#appoinment').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-
 document.getElementById('servicesNavBtn').addEventListener('click', function () {
     document.querySelector('#servicesSection').scrollIntoView({
         behavior: 'smooth'
