@@ -34,7 +34,7 @@ function continuarEncuesta(){
 
 function redirectGoogleReviews() {
     if (stars === 0) {
-        alert('Por favor califica con estrellas');
+        alert('Por favor calificános haciendo click en las estrellas.');
     }
     else if (stars === 5) {
         window.location.href = 'https://g.page/r/CVshYZSjgMJtEBM/review';
