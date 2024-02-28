@@ -1,106 +1,42 @@
-// Scroll reveal animations
-const sr = ScrollReveal({
-    origin: 'bottom',
-    distance: '60px',
-    duration: 3000,
-    delay: 600
-    // reset: true //reset aniamtion
-})
+var inForm = false; // --> Determinar en que pagina esta
+var stars = 0; //--> Cantidad de estrellas calificadas
 
-// Stats
-sr.reveal('.stats__item', {
-    delay: 0,
-    distance: '100px',
-    interval: 100,
-    origin: 'top'
-})
-
-// Variable para redireccionar a GoogleReviews
-var redirect = false;
-var inForm = false;
-var stars = 4;
-
-const star1 = document.querySelector('.star__1');
-const star2 = document.querySelector('.star__2');
-const star3 = document.querySelector('.star__3');
-const star4 = document.querySelector('.star__4');
-const star5 = document.querySelector('.star__5');
 const starBtn = document.querySelector('.star__btn');
 const formContent = document.querySelector('.form__content');
 const title = document.querySelector('.title');
+const second_title = document.querySelector('.second_title');
 const starsContent = document.querySelector('.stars__content');
 const confirmContent = document.querySelector('.confirm__content');
+const starsElements = document.querySelectorAll('.star');
 
-
-star1.addEventListener('click', () => {
-    if (inForm === false) {
-        redirect = false;
-        stars = 1;
-        star1.classList.add('text-yellow-300');
-        star2.classList.remove('text-yellow-300');
-        star3.classList.remove('text-yellow-300');
-        star4.classList.remove('text-yellow-300');
-        star5.classList.remove('text-yellow-300');
-    }
+starsElements.forEach((star, index) => {
+    star.addEventListener('click', () => {
+        if (!inForm) {
+            stars = index + 1;
+            updateStarsUI();
+        }
+    });
 });
 
-star2.addEventListener('click', () => {
-    if (inForm === false) {
-        redirect = false;
-        stars = 2;
-        star1.classList.add('text-yellow-300');
-        star2.classList.add('text-yellow-300');
-        star3.classList.remove('text-yellow-300');
-        star4.classList.remove('text-yellow-300');
-        star5.classList.remove('text-yellow-300');
-    }
-});
-
-star3.addEventListener('click', () => {
-    if (inForm === false) {
-        redirect = false;
-        stars = 3;
-        star1.classList.add('text-yellow-300');
-        star2.classList.add('text-yellow-300');
-        star3.classList.add('text-yellow-300');
-        star4.classList.remove('text-yellow-300');
-        star5.classList.remove('text-yellow-300');
-    }    
-});
-
-star4.addEventListener('click', () => {
-    if (inForm === false) {
-        redirect = false;
-        stars = 4;
-        star1.classList.add('text-yellow-300');
-        star2.classList.add('text-yellow-300');
-        star3.classList.add('text-yellow-300');
-        star4.classList.add('text-yellow-300');
-        star5.classList.remove('text-yellow-300');
-    }
-});
-
-star5.addEventListener('click', () => {
-    if (inForm === false) {
-        redirect = true;
-        stars = 5;
-        star1.classList.add('text-yellow-300');
-        star2.classList.add('text-yellow-300');
-        star3.classList.add('text-yellow-300');
-        star4.classList.add('text-yellow-300');
-        star5.classList.add('text-yellow-300');
-    }
-});
+function updateStarsUI() {
+    starsElements.forEach((star, index) => {
+        star.classList.toggle('text-yellow-300', index < stars);
+    });
+}
 
 function continuarEncuesta(){
+    inForm = true;
     starBtn.classList.add('hidden');
     formContent.classList.remove('hidden');
-
+    title.classList.add('hidden');
+    second_title.classList.remove('hidden');
 }
 
 function redirectGoogleReviews() {
-    inForm = true;
-    if (redirect === true) {
+    if (stars === 0) {
+        alert('Por favor califica con estrellas');
+    }
+    else if (stars === 5) {
         window.location.href = 'https://g.page/r/CVshYZSjgMJtEBM/review';
     }
     else {
@@ -117,7 +53,7 @@ function enviarFormulario() {
 
     // Crear objeto de datos
     var datos = {
-        // estrellas: stars, --> Ajustar make para agregar este campo
+        estrellas: stars,
         comentario: comentario,
         fecha: new Date().toLocaleString(),
         // Agrega aquí más campos según sea necesario
@@ -149,6 +85,7 @@ function mostrarMensaje() {
     // Ocultamos
     starsContent.classList.add('hidden');
     title.classList.add('hidden');
+    second_title.classList.add('hidden');
     formContent.classList.add('hidden');
 
     // Muestra el mensaje de agradecimiento
