@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/icons/icono.ico">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE5N29QFKG">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HE5N29QFKG');
+    </script>
+
+    <!-- Meta Datos -->
+    <title>CIVet Rosario | Formulario</title>
+    <meta name="description" content="Centro Integral Veterinario Lider en Rosario">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/output.css">
+
+    <!-- fonts -->
+    <link 
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.min.css" 
+    >
+    <!-- icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+</head>
+<body>
+
+    <script>
+
+        direccion = '';
+
+        // Función para establecer la fecha actual
+        function setCurrentDate() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            const currentDate = `${year}-${month}-${day}`;
+            
+            document.getElementById('fecha').value = currentDate;
+        }
+    
+        // Ejecutar la función cuando se carga la página
+        window.onload = setCurrentDate;
+    </script>
+
+    <!-- Header -->
+    <header 
+    class="py-8 lg:pt-6 lg:pb-5">
+        <div
+            class="container mx-auto lg:relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0"
+        >
+            <!-- Logo -->
+            <div class="flex justify-center lg:justify-normal">
+                <a href="#">
+                    <!-- <img src="./assets/img/header/logo.svg" alt=""> -->
+                    <img class="h-28" src="./assets/img/header/Logo color.png" alt="">
+                </a>
+            </div>
+
+            <div class="lg:flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0 hidden">
+                <!-- Ubicacion -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
+                    <i class="ri-map-pin-2-fill text-2xl text-accent"> </i>
+                    <a href="https://www.google.com/maps?um=1&fb=1&gl=ar&sa=X&geocode=KQki7LJyq7eVMVshYZSjgMJt&daddr=Pasco+1851,+S2000+Rosario,+Santa+Fe&ved=2ahUKEwjE57KKiqaEAxWcuJUCHRbyD5oQiBN6BQgAEIMB"
+                    class="text-secondary hover:text-accent-secondary transition-all duration-300">
+                        Pasco 1851, Rosario, Santa Fe
+                    </a>
+                </div>
+                <!-- Telefono -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
+                    <i class="ri-phone-fill text-2xl text-accent"></i>
+                    <a class="text-secondary hover:text-accent-secondary transition-all duration-300" href="tel:4851242">4851242</a>
+                </div>
+
+                <!-- mobile nav -->
+                <nav class="mnav bg-white fixed w-[300px] top-0 h-screen 
+                -left-[300px] shadow-2xl lg:hidden transition-all duration-300 z-20">
+                    
+                    <!-- nav trigger btn -->
+                    <div class="mnav__close-btn bg-primary w-8 h-8 relative -right-full
+                    top-8 flex justify-center items-center rounded-tr-lg rounded-br-lg
+                    cursor-pointer transition-all">
+                        <i class="mnav__close-btn-icon ri-arrow-right-s-line text-2xl text-white"></i>
+                    </div>
+
+                    <!-- nav content -->
+                    <div class="px-12 flex flex-col gap-y-12 h-full">
+                        <!-- Logo -->
+                        <a href="/">
+                            <!-- <img src="assets/img/header/logo.svg" alt=""> -->
+                            <img class="h-28" src="./assets/img/header/Logo color.png" alt="">
+                        </a>
+                        <!-- List -->
+                        <ul class="flex flex-col gap-y-5">
+                            <li>
+                                <a 
+                                    href="/"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Inicio</a>
+                            </li>
+                            <li class="hidden">
+                                <a 
+                                    href="#"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Veterinarios</a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="#"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Servicios</a>
+                            </li>
+                            <!-- Oculta -->
+                            <li class="hidden">
+                                <a 
+                                    href="#"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Blog</a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="/contacto"
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >Contacto</a>
+                            </li>
+                            <li>
+                                <a 
+                                    target="_BLANK"    
+                                    href="https://wa.me/5493416402289?text=Buen%20Dia!%20Queria%20consultar..."
+                                    class="text-secondary hover:text-accent transition-all duration-300"
+                                >WhastApp</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Formulario -->
+    <section 
+        class="encuesta">
+        <div
+            class="departments__bg bg-purple-100 bg-cover xl:bg-auto bg-center bg-no-repeat max-w-[1066px] mx-4
+            xl:m-auto rounded-[20px] px-6 xl:px-0 py-12 relative min-h-[400px] flex items-center" id="alert">
+            <div class="departments__container container flex flex-col items-center">
+                <!-- Title -->
+                <div class="title">
+                    <h2 class="h2 mb-[20px] text-center capitalize">Carga Domicilios</h2>
+                </div>
+
+                <!-- Mensaje de confirmacion -->
+                <div class=" hidden px-4 py-3 relative max-w-sm mx-auto mb-[20px] w-[300px] sm:w-[1000px]" role="alert" style="
+                    --tw-bg-opacity: 1; background-color: rgb(204 251 241 / var(--tw-bg-opacity)) /* #ccfbf1 */; 
+                    --tw-border-opacity: 1; border-color: rgb(20 184 166 / var(--tw-border-opacity)) /* #14b8a6 */;
+                    --tw-text-opacity: 1; color: rgb(19 78 74 / var(--tw-text-opacity)) /* #134e4a */;
+                    border-radius: 0.25rem /* 4px */;"
+                    id="alertMessage">
+                    <!-- <strong class="font-bold">Carga exitosa</strong> -->
+                    <span class="block sm:inline">El domicilio <b id="direccionAlert"></b> se cargo correctamente</span>
+                    <script>
+                        if (direccion != '') {
+                            document.getElementById('direccionAlert').textContent  = direccion;
+                        }
+                    </script>
+                </div>
+                
+                <!-- Encuesta -->
+                <div class="form__content">
+                    <div class=" flex flex-col">
+                        <form id="encuestaFormDomicilio" onsubmit="enviarFormularioDomicilio(); return false;">
+
+                            <!-- Fecha -->
+                            <div>
+                                <label class="text-gray-600"></label>
+                                    Fecha
+                                </label>
+                                <div class=" flex flex-col">                                   
+                                    <div class="max-w-sm mx-auto mb-[20px] w-[300px] sm:w-[1000px]">
+                                        <input 
+                                            type="date"
+                                            id="fecha" 
+                                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-pink-50 focus:border-pink-50" 
+                                            name="fecha"
+                                            required
+                                            >
+                                        </input>
+                                    </div>                                                            
+                                </div>
+                            </div>
+
+                            <!-- Direccion -->
+                            <div>
+                                <label class="text-gray-600"></label>
+                                    Direccion
+                                </label>
+                                <div class="flex flex-col">
+                                    <div class="max-w-sm mx-auto mb-[20px] w-[300px] sm:w-[1000px]">
+                                        <input 
+                                            id="direccion" 
+                                            name="direccion"
+                                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-pink-50 focus:border-pink-50" 
+                                            placeholder="Direccion..."
+                                            required>
+                                        </input>
+                                    </div>                          
+                                </div>
+                            </div>
+
+                            <!-- Monto Input -->
+                            <div class="mb-4">
+                                <label class="text-gray-600">
+                                    Monto <span id="montoAlert" class="hidden" style="color: red; font-size: 14px;">*El monto debe ser mayor a 0</span>
+                                </label>
+                              
+                                <div class="flex items-center border border-gray-300 w-full p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-pink-50 focus:border-pink-50">
+                                    <span class="text-gray-900 mr-2">&#x24;</span>
+                                    <input id="monto" name="monto" type="number" class="outline-none bg-transparent w-full" placeholder="0.00" required>
+                                </div>
+                            </div> 
+
+                            <!-- Perro / Gato -->
+                            <div>
+
+                                <label class="text-gray-600"></label>
+                                    Felino / Canino <span id="tipoEmptyAlert" class="hidden" style="color: red; font-size: 14px;">*Campo obligatorio</span>
+                                </label>
+                                
+                                <div class="flex w-full">
+                                    <div class="flex items-center mb-4 pr-4">
+                                        <input id="tipoFelino" type="radio" name="tipo" value="felino" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+                                        <label for="tipoFelino" class="font-medium text-gray-600" style="margin-left: 0.5rem">Felino</label>
+                                    </div>
+                            
+                                    <div class="flex items-center mb-4">
+                                        <input id="tipoCanino" type="radio" name="tipo" value="canino" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+                                        <label for="tipoCanino" class="font-medium text-gray-600" style="margin-left: 0.5rem">Canino</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Tratamiento / Diagnostico -->
+                            <div>
+                                <label class="text-gray-600"></label>
+                                    Tratamiento / Diagnostico
+                                </label>
+    
+                                <div class="max-w-sm mx-auto mb-[20px] w-[300px] sm:w-[1000px]">
+                                    <textarea 
+                                        id="tratamiento"
+                                        name="tratamiento" 
+                                        rows="3" 
+                                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-pink-50 focus:border-pink-50" 
+                                        placeholder="Se realizo..."
+                                        required></textarea>
+                                </div>                          
+                            </div>
+
+                            <!-- Observaciones -->
+                            <div>
+                                <label class="text-gray-600"></label>
+                                    Observaciones
+                                </label>
+    
+                                <div class="max-w-sm mx-auto mb-[20px] w-[300px] sm:w-[1000px]">
+                                    <textarea 
+                                        id="observaciones" 
+                                        name="observaciones"
+                                        rows="2" 
+                                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-pink-50 focus:border-pink-50" 
+                                        placeholder="Observaciones..."
+                                        ></textarea>
+                                </div>                          
+                            </div>
+                            
+                            <div>
+                                <button 
+                                    type="submit" 
+                                    class="btn btn-lg btn-accent mx-auto">Enviar
+                                </button> 
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Encuesta -->
+
+
+
+
+    
+    <!-- Scripts -->
+    <!-- swiper js -->
+    <!-- <script src="js/swiper-bundle.min.js"></script> -->
+    <!-- scroll reveal -->
+    <!-- <script src="js/scrollreveal.min.js"></script> -->
+    <!-- main -->
+    <script src="js/domicilio.js"></script>
+</body>
+</html>
